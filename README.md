@@ -2,7 +2,7 @@
 -------------------------
 Session Février 2018 - Promo JS - **Projet Quiz Manager**
 
-###Objectives
+### Objectives
 -------------
 
 This is a fork of the study project i have to do in agile team during my wild code school formation.
@@ -14,14 +14,14 @@ The creator can play to it before it is validated to test it.
 The administrator have a password protected space to check, verify or delete the user's created quiz.
 He can also change some elements of the website directly for his admin page.
 
-###Installation
+### Installation
 ---------------
 
 Clone the project and run npm install
 Import the database from backup.sql
 Change the value for user/password in the db.js file
 
-###Attributions
+### Attributions
 ---------------
 
 I was particulary in charge of the sql database and most of the requests to it.
