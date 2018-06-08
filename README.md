@@ -17,8 +17,10 @@ He can also change some elements of the website directly for his admin page.
 ### Installation
 ---------------
 
-Clone the project and run npm install
+Clone the project and run `npm install`
+
 Import the database from backup.sql
+
 Change the value for user/password in the db.js file
 
 ### Attributions
