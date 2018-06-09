@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const connectionParameters = require('./sqlParameters');
+const connectionParameters = require('./../../db');
 
 getQuiz = (id, cb) => {
   try {
@@ -292,42 +292,3 @@ module.exports = {
   getCheckedQuiz,
   getUncheckedQuiz
 };
-
-// getLastQuiz(function(data) {
-//    console.log(JSON.stringify(data,0,2));
-//    });
-
-// getListQuiz(function(data) {
-//    console.log(JSON.stringify(data,0,2));
-//    });
-
-// getListQuiz(function(data) {
-//    console.log(JSON.stringify(data,0,2));
-//    });
-
-// getQuiz(1,function(data) {
-//   console.log(JSON.stringify(data,0,2));
-//  });
-
-// getQuizInfos(1,function(data) {
-//    console.log(JSON.stringify(data,0,2));
-//   });
-
-
-/* Pour appeler la fonction getQuiz, il faut mettre un callback qui retournera l'objet voulu comme dans l'exemple ci dessous
-
-Le 1 correspond à l'Id du quiz que vous voulez charger
-La fonction en exemple affichera le résultat dans la console de manière "lisible"
-
-
-La solution en dessous nous permettra de prévoir des routes passant en paramètre l'objet correspondant
-
-router.get("/:id",(req,res)=>{
-
-  getQuiz(1, function(err,data){
-    res.render("mavue",{quiz});
-
-  });
-}
-
-*/

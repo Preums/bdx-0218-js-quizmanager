@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const connectionParameters = require('./sqlParameters');
+const connectionParameters = require('./../../db');
 
 updateDelete = (id,cb) => {
     try {

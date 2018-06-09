@@ -1,12 +1,12 @@
+//Définition des variables de connection
+const mysql = require('mysql');
 
-var mysql = require('mysql')
-var connection = mysql.createConnection({
+const connectionParameters = {
   host     : 'localhost',
-  user     : '',
-  password : '',
+  user     : 'root',
+  password : 'jecode4wcs',
   database : 'quizDb'
-})
+};
+// TODO: a adapter aux paramètres de la base de donnée du fournisseur en production
 
-connection.connect()
-
-module.exports = connection;
+module.exports = connectionParameters;

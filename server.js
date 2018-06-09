@@ -1,5 +1,4 @@
 // server.js
-// load the things we need
 
 var express = require('express');
 var router = express.Router();
@@ -42,12 +41,15 @@ app.set('view engine', 'ejs');
 
 // index page
 app.get('/', function (req, res) {
-    res.render('pages/index');
+    readQuiz.getLastQuiz(function (dataQuiz) {
+        readQuiz.getAccueil(function (dataText) {
+            res.render('pages/accueil', { titre: dataQuiz, text: dataText });
+        })
+    })
 });
 
 
 //page jouer
-
 app.get('/jouer', function(req, res) {
     readQuiz.getListQuiz(function (data){
     res.render('pages/jouer',{titre:data});
@@ -77,10 +79,11 @@ app.post('/checkAdmin',function(req,res) {
 });
 
 app.get('/admin', function(req,res) {
-    if(!req.session.name) {
+    if(typeof req.session.name == 'undefined') {
         res.redirect('/login');
-    }
+    } else {
     res.render('pages/admin');
+	}
 });
 
 

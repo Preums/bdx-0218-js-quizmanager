@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const connectionParameters = require('./sqlParameters');
+const connectionParameters = require('./../../db');
 
 setQuiz = (obj,cb) => {
     try {
@@ -59,12 +59,5 @@ setQuiz = (obj,cb) => {
         throw ('An error occur during the connection creation process: '+ err);
     }
 };
-
-// Format de requête
-// setQuiz(quiz, function(data){
-//     console.log('job done, new quiz id :'+ data);
-// });
-
-// La variable data retourné correspond à l'Id du quiz inséré
 
 module.exports = {setQuiz};
